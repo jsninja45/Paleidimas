@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateChatsTable extends Migration {
+
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('chats', function(Blueprint $table)
+		{
+			$table->engine = "InnoDB";
+
+			$table->increments('id');
+			$table->integer('user1_id')->unsigned();
+			$table->integer('user2_id')->unsigned();
+			$table->integer('last_message_id')->unsigned();
+			$table->timestamps();
+		});
+	}
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::drop('chats');
+	}
+
+}

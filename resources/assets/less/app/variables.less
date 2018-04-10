@@ -1,0 +1,103 @@
+//== Fonts
+@font-doppio-one: "Doppio One", sans-serif;
+@font-arial: Arial, Helvetica, sans-serif;
+@font-georgia: Georgia, "Times New Roman", Times, serif;
+
+//== Media queries breakpoints
+
+// Large screen / wide desktop
+@screen-lg-min: 1200px;
+
+// Medium screen / desktop
+@screen-md-min: 992px;
+@screen-md-max: (@screen-lg-min - 1);
+
+// Small screen / tablet
+@screen-sm-min: 768px;
+@screen-sm-max: (@screen-md-min - 1);
+
+// Extra small screen / phone
+@screen-xs-max: (@screen-sm-min - 1);
+@screen-xxs-max: 479px;
+
+
+//== Grid system
+
+// Number of columns in the grid.
+@grid-columns: 12;
+
+// Padding between columns. Gets divided in half for the left and right.
+@grid-gutter-width: 30px;
+
+
+//== Container sizes
+
+// Small screen / tablet
+@container-tablet: (720px + @grid-gutter-width);
+@container-sm: @container-tablet;
+
+// Medium screen / desktop
+@container-desktop: (940px + @grid-gutter-width);
+@container-md: @container-desktop;
+
+// Large screen / wide desktop
+@container-large-desktop: (1140px + @grid-gutter-width);
+@container-lg: @container-large-desktop;
+
+//== Alerts
+//
+//## Define alert colors, border radius, and padding.
+@line-height-computed:        19px;
+
+@alert-padding:               15px;
+@alert-border-radius:         4px;
+@alert-link-font-weight:      bold;
+
+@alert-success-bg:            #dff0d8;
+@alert-success-text:          #3c763d;
+@alert-success-border:        darken(spin(@alert-success-bg, -10), 5%);
+
+@alert-info-bg:               #d9edf7;
+@alert-info-text:             #31708f;
+@alert-info-border:           darken(spin(@alert-info-bg, -10), 7%);
+
+@alert-warning-bg:            #fcf8e3;
+@alert-warning-text:          #8a6d3b;
+@alert-warning-border:        darken(spin(@alert-warning-bg, -10), 5%);
+
+@alert-danger-bg:             #f2dede;
+@alert-danger-text:           #a94442;
+@alert-danger-border:         darken(spin(@alert-danger-bg, -10), 5%);
+
+//== Tooltips
+//
+//##
+
+@font-size-small:             14px;
+@zindex-popover:              1060;
+@zindex-tooltip:              1070;
+@border-radius-base:          2px;
+@font-family-base:            @font-arial;
+@line-height-base:            1.5;
+
+//** Tooltip max width
+@tooltip-max-width:           542px;
+//** Tooltip text color
+@tooltip-color:               #fff;
+//** Tooltip background color
+@tooltip-bg:                  #ee8b1b;
+@tooltip-opacity:             1;
+
+//** Tooltip arrow width
+@tooltip-arrow-width:         15px;
+//** Tooltip arrow color
+@tooltip-arrow-color:         @tooltip-bg;
+
+//== Close
+//
+//##
+
+@font-size-base:              14px;
+@close-font-weight:           bold;
+@close-color:                 #000;
+@close-text-shadow:           0 1px 0 #fff;

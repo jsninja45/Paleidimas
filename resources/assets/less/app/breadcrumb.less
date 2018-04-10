@@ -1,0 +1,32 @@
+.site-breadcrumb {
+  font-size: 0;
+  padding: 17px 0 20px;
+
+  span {
+    font-family: @font-arial;
+    font-size: 15px;
+
+    &:after {
+      content: "\00bb";
+      margin: 0 5px;
+    }
+
+    &:last-child:after {
+      content: initial;
+    }
+
+    &:first-child > a {
+      color: #444e5b;
+    }
+  }
+
+  a {
+    color: #ee8a18;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}

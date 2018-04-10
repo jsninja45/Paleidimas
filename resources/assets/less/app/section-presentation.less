@@ -1,0 +1,87 @@
+.presentation-section {
+  background: #f4f5fb;
+  padding: 20px 0 40px;
+
+  h3 {
+    font-family: @font-doppio-one;
+    font-size: 35px;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+
+    a {
+      color: #10617f;
+      text-decoration: none;
+    }
+
+    span {
+      color: #444f5b;
+      text-transform: none;
+
+      &:before {
+        background: url(../img/images/arrow-right.png);
+        content: "";
+        display: inline-block;
+        height: 18px;
+        margin: 0 9px 0 5px;
+        width: 12px;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 24px 0 0;
+    padding: 0 0 0 69px;
+
+    li {
+      color: #495563;
+      font-size: 15px;
+      line-height:1.3;
+      margin-bottom: 19px;
+      min-height: 47px;
+      padding-top: 10px;
+      position: relative;
+
+      &:before {
+        background: url(../img/images/sprites.png) -308px -328px no-repeat;
+        content: "";
+        height: 47px;
+        left: -69px; /* icon width + 22px */
+        position: absolute;
+        top: 0;
+        width: 47px;
+      }
+    }
+  }
+
+  .laptop-bg {
+    background: url(../img/images/laptop.png) no-repeat;
+    float: right;
+    height: 310px;
+    padding: 14px 0 0 79px;
+    width: 548px;
+
+    @media (max-width: @screen-sm-max) {
+      background: none;
+      height: auto;
+      margin-top: 40px;
+      padding: 0;
+      width: 100%;
+
+      object,
+      object embed{
+        width:100%;
+        height:auto
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+

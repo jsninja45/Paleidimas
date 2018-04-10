@@ -1,0 +1,276 @@
+.site-header {
+  background-color: #fff;
+  border-bottom: 3px solid #f6a022;
+}
+
+.top-header {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 5px 0;
+
+  .social {
+    font-size: 0;
+    padding-top: 5px;
+  }
+
+  .fb-like {
+    display: inline-block;
+    line-height: normal;
+    margin-right: 10px;
+  }
+
+  .menu {
+    float: right;
+  }
+
+  .menu-link {
+    color: #808080;
+    display: block;
+    float: left;
+    font-size: 13px;
+    line-height: 30px;
+    margin-left: 25px;
+    padding-left: 25px;
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+      color: #f9b02f
+    }
+
+    &:before {
+      content: " ";
+      display: block;
+      left: 0;
+      position: absolute;
+      top: 5px;
+    }
+  }
+
+  .links-tab {
+    background-color: #e4e4e4;
+    display: block;
+    float: left;
+    height: 25px;
+    margin: 3px 8px 0 7px;
+    width: 1px;
+  }
+
+  // Login link
+  .menu-link-login {
+    color: #3d7f97;
+    margin-left: 0;
+    padding-left: 29px;
+
+    &:before {
+      background-image: url(../img/mlogin.png);
+      height: 11px;
+      top: 10px;
+      width: 21px;
+    }
+
+    &:hover {
+      color: #1e5467;
+
+      &:before {
+        background-image: url(../img/mloginh.png);
+      }
+    }
+  }
+
+  // Sign up link
+  .menu-link-register {
+    color: #f9b000;
+    margin-left: 0;
+    padding: 0 22px 0 0;
+
+    &:before {
+      background-image: url(../img/msignup.png);
+      height: 14px;
+      left: auto;
+      right: 0;
+      top: 8px;
+      width: 15px;
+    }
+
+    &:hover {
+      color: #f98100;
+
+      &:before {
+        background-image: url(../img/msignuph.png);
+      }
+    }
+  }
+
+  // Log out link
+  .menu-link-logout {
+    color: #ff4141;
+    margin-left: 41px;
+    padding: 0 28px 0 0;
+
+    &:before {
+      background-image: url(../img/mlogout.png);
+      height: 18px;
+      left: auto;
+      right: 0;
+      top: 6px;
+      width: 18px;
+    }
+
+    &:hover {
+      color: #dd0404;
+
+      &:before {
+        background-image: url(../img/mlogouth.png);
+      }
+    }
+  }
+
+  .menu-link-admin:before {
+    background-image: url(../img/madmin.png);
+    height: 17px;
+    width: 16px;
+  }
+
+  .menu-link-settings:before {
+    background-image: url(../img/mclient.png);
+    height: 16px;
+    width: 16px;
+  }
+
+  .menu-link-orders:before {
+    background-image: url(../img/mcontent.png);
+    height: 16px;
+    width: 16px;
+  }
+
+  .menu-link-place_order:before {
+    background-image: url(../img/mplace_order.png);
+    height: 17px;
+    width: 16px; 
+  }
+
+  @media (max-width: @screen-xs-max) {
+    .social {
+      text-align: center;
+    }
+
+    .menu {
+      float: initial;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .menu-link {
+      display: inline-block;
+      float: initial;
+      margin-left: 12px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .links-tab {
+      display: none;
+    }
+  }
+}
+
+.main-header {
+  padding: 9px 0 10px;
+
+  .header-logo {
+    display: block;
+    height: 61px;
+
+    img {
+      &:extend(.img-responsive);
+    }
+  }
+
+  .menu ul {
+    float: right;
+    margin: 22px 0 0 0;
+    padding: 0;
+
+    li {
+      display: inline;
+
+      a {
+        color: #555;
+        display: block;
+        float: left;
+        font-family: @font-doppio-one;
+        font-size: 15px;
+        margin-left: 50px;
+        text-decoration: none;
+        transition: color .2s;
+
+        &:hover,
+        &.active {
+          color: #f9b000;
+        }
+      }
+    }
+  }
+
+  .menu-toggle {
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    float: right;
+    margin-top: 15px;
+    outline: none;
+    padding: 9px 10px;
+
+    .icon-bar {
+      background-color: #888;
+      border-radius: 1px;
+      display: block;
+      height: 2px;
+      margin-top: 4px;
+      width: 22px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @media (max-width: @screen-sm-max) {
+    #gradient > .vertical(transparent, #f9b000, 0%, 0%);
+    background-position: 0 81px;
+
+    .menu {
+      height: 0;
+      overflow: hidden;
+      .transition(height .5s);
+
+      &.collapsed {
+        height: 223px;
+      }
+
+      ul {
+        float: initial;
+        margin-top: 13px;
+
+        li {
+          display: block;
+
+          a {
+            border-bottom: 1px solid rgba(0, 0, 0, .08);
+            color: #fff;
+            float: initial;
+            line-height: 35px;
+            margin-left: 0;
+            text-transform: uppercase;
+
+            &:hover {
+              color: #ddd;
+            }
+          }
+        }
+      }
+    }
+  }
+}

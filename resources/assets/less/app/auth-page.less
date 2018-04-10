@@ -1,0 +1,248 @@
+.auth-body {
+  padding: 10px 0 200px;
+
+  .heading {
+    color: #444f5b;
+    font-family: @font-doppio-one;
+    font-size: 25px;
+    font-weight: normal;
+    margin: 0 0 35px;
+    text-transform: uppercase;
+  }
+
+  .form-control {
+    border-color: #d5d5dc;
+    border-radius: 3px;
+    color: #a4aab4;
+    height: 43px;
+    line-height: 43px;
+  }
+
+  .checkbox {
+    padding-top: 8px;
+  }
+
+  .button-large {
+    color: #fff;
+    float: right;
+    font-size: 19px;
+    height: 43px;
+    line-height: 40px;
+    padding: 0 50px;
+    width: auto;
+  }
+
+  .button-auth {
+    background-color: #10617f;
+    border-color: #0e516a;
+  }
+
+  .forgot-password {
+    color: #6c727b;
+    float: left;
+    font-family: @font-doppio-one;
+    font-size: 19px;
+    line-height: 43px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .auth-social {
+    color: #fff;
+    display: block;
+    font-family: @font-doppio-one;
+    font-size: 16px;
+    height: 43px;
+    line-height: 43px;
+    padding-left: 53px;
+    width: 300px;
+    text-align: center;
+    text-decoration: none;
+
+    &.auth-facebook {
+      background-image: url(../img/auth-fb.png);
+    }
+
+    &.auth-google {
+      background-image: url(../img/auth-gplus.png);
+    }
+  }
+
+  .sign-up-heading {
+    background: #fff;
+    color: #ceced5;
+    font-family: @font-doppio-one;
+    font-size: 25px;
+    margin: 43px 0 0 63px;
+    position: relative;
+    text-align: center;
+    width: 260px;
+
+    &:before,
+    &:after{
+      background-color: #d5d5dc;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 18px;
+      width: 48px;
+    }
+
+    &:after {
+      left: initial;
+      right: 0;
+    }
+  }
+
+  .sign-up-label:extend(.auth-body .forgot-password) {
+    color: #6d727b;
+    font-size: 21px;
+  }
+
+  .auth-last-row {
+    margin: 40px 0 80px;
+  }
+
+  .data-field {
+    background-color: #ebedf4;
+    color: #495563;
+    display: inline-block;
+    font-family: @font-arial;
+    font-size: 15px;
+    height: 38px;
+    line-height: 38px;
+    margin-right: 1px;
+    min-width: 316px;
+    padding: 0 22px 0 30px;
+
+    strong {
+      color: #4b535c;
+      font-family: @font-doppio-one;
+      font-size: 16px;
+      font-weight: 400;
+      margin-right: 19px;
+      text-transform: uppercase;
+    }
+  }
+
+}
+
+.login-page .auth-body {
+  .button-auth {
+    float: left;
+    margin-left: 60px;
+    padding: 0 65px;
+  }
+
+  .auth-last-row {
+    margin-top: 50px;
+  }
+}
+
+.settings-page .auth-body {
+  .button-large {
+    cursor: pointer;
+    display: inline-block;
+    float: none;
+    font-size: 16px;
+    height: 37px;
+    line-height: 31px;
+    padding: 0 35px;
+  }
+
+  .button-delete {
+    background-color: #ee8a18;
+    border-color: #d07b19;
+  }
+
+  .button-change {
+    background-color: #495563;
+    border-color: #3b444f;
+    margin: 21px 13px 0 0;
+  }
+
+  .button-delete {
+    display: inline-block;
+    margin-left: 55px;
+  }
+
+  .change-form {
+    display: none;
+    max-width: 430px;
+
+    h4 {
+      color: #495563;
+      font-family: @font-doppio-one;
+      font-size: 17px;
+      font-weight: normal;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .form-group:nth-of-type(1) {
+      margin-bottom: 15px;
+    }
+
+    .button-large {
+      float: right;
+    }
+  }
+
+  .change-password {
+    margin-left: 196px;
+  }
+
+  .checkbox {
+    padding-top: 19px;
+  }
+}
+
+@media (max-width: @screen-sm-max) {
+  .register-page .auth-body .button-auth {
+    float: left;
+  }
+
+  .settings-page .auth-body .button-delete {
+    margin: 20px 0 0 0;
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .auth-body {
+    .data-field {
+      margin-bottom: 1px;
+      width: 100%;
+    }
+
+    .sign-up-heading {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .settings-page .auth-body .change-password {
+    margin: 0;
+  }
+
+  .login-page .auth-body {
+    .button-large,
+    .forgot-password,
+    .sign-up-label {
+      float: initial;
+    }
+
+    .button-large {
+      display: block;
+      margin: 10px 0 0;
+      width: 100%;
+    }
+
+    .button-auth {
+      margin-left: 0;
+    }
+  }
+}

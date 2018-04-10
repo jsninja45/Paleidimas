@@ -1,0 +1,63 @@
+.about-page {
+  h1 {
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .content {
+    line-height: 27px;
+  }
+
+  .info {
+    color: #181818;
+    font-family: @font-georgia;
+    font-size: 18px;
+    font-style: italic;
+    margin: 77px 0 10px;
+    text-align: center;
+  }
+
+  .google-map {
+    width: auto;
+    height: 285px;
+  }
+
+  .contacts {
+    color: #585858;
+    font-family: @font-georgia;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 50px;
+    padding-left: 80px;
+    position: relative;
+    text-align: left;
+
+    &:before {
+      background-image: url('../img/homeIcon.png');
+      content: " ";
+      height: 45px;
+      left: 10px;
+      position: absolute;
+      top: 15px;
+      width: 45px;
+    }
+  }
+
+  .contact-form {
+    margin-top: 85px;
+
+    h1 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 13px;
+  }
+
+  textarea.form-control {
+    min-height: 130px;
+    resize: vertical;
+  }
+}

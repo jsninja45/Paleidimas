@@ -1,0 +1,162 @@
+.loyalty {
+  margin: 50px 0;
+
+  .text {
+    color: #444f5b;
+
+    h4 {
+      font-family: "Doppio One", sans-serif;
+      font-size: 33px;
+      font-weight: normal;
+      line-height: 1;
+      margin: 0 0 30px;
+      text-align: center;
+    }
+
+    .sprite {
+      float: left;
+      margin-right: 13px;
+    }
+
+    p {
+      font-size: 15px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      text-align: justify;
+    }
+  }
+
+  .time,
+  .percent {
+    float: right;
+    margin-top: 12px;
+
+    & > div {
+      font-family: @font-doppio-one;
+      height: 50px;
+      line-height: 50px;
+      margin-bottom: 1px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .time {
+    border-left: 3px solid #fff;
+    width: 78%;
+
+    & > div {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      color: #fff;
+      font-size: 20px;
+      padding-left: 9px;
+    }
+
+    & > .time1 {
+      background: #ee8a18;
+      width: 70%;
+    }
+
+    & > .time2 {
+      background: #d77a0f;
+      width: 85%;
+    }
+
+    & > .time3 {
+      background: #bd6907;
+      width: 100%;
+    }
+  }
+
+  .percent {
+    border-right: 5px solid #3f3f3f;
+    color: #3f4954;
+    font-size: 24px;
+    padding-right: 20px;
+    text-transform: uppercase;
+    text-align: right;
+    width: 22%;
+  }
+
+  // for medium screens
+  @media (max-width: @screen-md-max) {
+    .text h4 {
+      font-size: 28px;
+    }
+
+
+    .time {
+      width: 73%;
+
+      & > div {
+        font-size: 17px;
+      }
+    }
+
+    .percent {
+      width: 27%;
+    }
+  }
+
+  // for small screens
+  @media (max-width: @screen-sm-max) {
+    .text {
+      margin-bottom: 40px;
+
+      h4 {
+        margin-bottom: 20px;
+      }
+    }
+
+    .time {
+      width: 83%;
+    }
+
+    .percent {
+      width: 17%;
+    }
+  }
+
+  // for extra small screens
+  @media (max-width: @screen-xs-max) {
+    .text .sprite {
+      display: block;
+      float: none;
+      margin: 0 auto 5px;
+    }
+
+    .percent {
+      width: 38%;
+
+      & > div {
+        font-size: 21px;
+      }
+    }
+
+    .time {
+      width: 62%;
+
+      & > div {
+        font-size: 10px;
+      }
+
+      & > .time1 {
+        width: 80%;
+      }
+
+      & > .time2 {
+        width: 90%;
+      }
+    }
+
+
+  }
+
+}
+
+
+
+

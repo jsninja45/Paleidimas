@@ -1,0 +1,6 @@
+/.idea
+/node_modules
+/vendor
+/public_html/vendor/paypal_ipn/ipn.log
+.env
+.phpstorm.meta.php

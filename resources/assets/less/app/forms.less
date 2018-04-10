@@ -1,0 +1,285 @@
+// Buttons
+.button-large,
+.button-medium {
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  border-bottom: 3px solid #e1e1e5;
+  color: #495563;
+  cursor: pointer;
+  display: block;
+  font-family: 'Doppio One', sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  outline: none;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: border .15s;
+  width: 100%;
+
+  &.orange {
+    background: #f9b000;
+    border-color: #e1a004;
+    color: #fff;
+  }
+
+  &:hover {
+    border-color: #c18800;
+  }
+
+  &:active {
+    border: 1px solid #d69700;
+  }
+
+  @media (max-width: @screen-sm-max) {
+    font-size: 20px;
+  }
+}
+
+.button-medium {
+  display: inline-block;
+  font-size: 17px;
+  height: 43px;
+  line-height: 40px;
+  padding: 0 50px;
+  width: auto;
+
+  &.button-icon {
+    padding: 0 25px;
+
+    .icon {
+      margin: 0 25px -5px 0;
+    }
+  }
+}
+
+.button-yellow {
+  background-color: #f9b000;
+  border-color: #d3990e;
+  color: #fff;
+}
+
+.button-neon {
+  background-color: #10617f;
+  color: #fff;
+
+  &, &:hover, &:active {
+    border-color: #0d5069;
+  }
+}
+
+.button-full-width {
+  display: block;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+
+.button {
+  background: #fda900;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 17px;
+  line-height: 1.2;
+  padding: 6px 15px;
+  text-align: center;
+}
+
+// Inputs
+.form-control {
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  color: #6f6f6f;
+  font-family: @font-arial;
+  font-weight: normal;
+  display: block;
+  font-size: 15px;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 10px;
+  width: 100%;
+
+  .placeholder(#a9abb3);
+
+  textarea& {
+    height: auto;
+    line-height: 1.4;
+    padding: 8px;
+  }
+
+  &.input-error {
+    background-color: #ffeeee !important;
+    border-color: #fb6363 !important;
+  }
+}
+
+.form-horizontal {
+  & > div {
+    margin-bottom: 20px;
+    padding: 0 10px 0 0;
+
+    &:last-child {
+      padding: 0;
+    }
+  }
+
+  &:after,
+  &:before {
+    &:extend(.clearfix:after);
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.checkbox,
+.radio {
+  /* Base for label styling */
+  input:not(:checked),
+  input:checked {
+    position: absolute;
+    left: -9999px;
+
+    & + label {
+      color:  #6c727b;
+      cursor: pointer;
+      display: inline-block;
+      font-family: @font-arial;
+      font-size: 15px;
+      line-height: 22px;
+      position: relative;
+      padding-left: 39px;
+      user-select: none;
+
+      /* checkbox aspect */
+      &:before {
+        background: #fff;
+        border: 1px solid #d5d5dc;
+        border-radius: 4px;
+        content: "";
+        height: 22px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 22px;
+      }
+
+      /* checked mark aspect */
+      &:after {
+        content: url(../img/checkbox-checkmark.png);
+        font-size: 0;
+        height: 12px;
+        left: 4px;
+        position: absolute;
+        top: 5px;
+        transition: all .2s;
+        width: 15px;
+      }
+    }
+  }
+
+  /* checked mark aspect changes */
+  input:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  input:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.radio {
+  input:not(:checked),
+  input:checked {
+    & + label {
+      &:before {
+        background: #fff;
+        border: 1px solid #d1d2da;
+        border-radius: 50%;
+      }
+
+      &:after {
+        background-color: #136380;
+        border-radius: 50%;
+        content: "";
+        height: 12px;
+        left: 5px;
+        top: 5px;
+        width: 12px;
+      }
+    }
+  }
+}
+
+.form-dropdown {
+  background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 90% 50%;
+  border: 1px solid #d1d2da;
+  border-radius: 3px;
+  color: #495563;
+  font-family: @font-arial;
+  font-size: 16px;
+  font-weight: bold;
+  height: 32px;
+  line-height: 32px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &:after {
+    background-color: #f9b000;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 40px;
+    z-index: 1;
+  }
+
+  &:before {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid #fff;
+    height: 0;
+    right: 11px;
+    top: 40%;
+    width: 0;
+    z-index: 2;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    height: 100%;
+    text-indent: 15px;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+

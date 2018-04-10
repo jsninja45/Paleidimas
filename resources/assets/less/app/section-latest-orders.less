@@ -1,0 +1,160 @@
+.latest-orders-section {
+  background: #fff;
+  padding: 50px 0;
+
+  h3.heading {
+    color: #444f5b;
+    margin: 0 0 30px;
+  }
+
+  table,
+  table tbody{
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  table {
+    width: 100%;
+
+    th, td {
+      font-size:14px;
+      height:51px;
+      padding:0;
+      text-align:center;
+      vertical-align:middle;
+    }
+
+    th {
+      background:#495563;
+      border:none;
+      color:#fff;
+      font-family:"Doppio One", sans-serif;
+      font-weight:normal;
+
+      &:first-child {
+        border-top-left-radius:3px;
+      }
+
+      &:last-child {
+        border-top-right-radius:3px;
+      }
+    }
+
+    td {
+      border:none;
+      border-top:1px solid #ebedf4;
+      background:#ebedf4;
+      color:#a9abb7;
+      font-family:Arial, sans-serif;
+    }
+
+    tr {
+      &:last-child {
+        td:first-child {
+          border-bottom-left-radius:3px;
+        }
+
+        td:last-child {
+          border-bottom-right-radius:3px;
+        }
+      }
+
+      &:nth-child(2) td {
+        color:#686a74
+      }
+
+      &:nth-child(3) td {
+        color:#7e808a
+      }
+
+      &:nth-child(4) td {
+        color:#8f919d
+      }
+
+      &:hover td {
+        background:#dfe1e8;
+      }
+
+      &:before {
+        background:#dcdee5;
+        content:" ";
+        display:block;
+        height:1px;
+        left:4%;
+        position:absolute;
+        width:92%;
+      }
+
+      &:first-child:before,
+      &:nth-child(2):before {
+        height:0
+      }
+    }
+
+    @media (max-width: @screen-xs-max) {
+      th, td {
+        font-size: 12px;
+      }
+
+      tr:before {
+        left: 8%;
+        width: 84%;
+      }
+    }
+  }
+
+  .stat {
+    margin-bottom: 20px;
+
+    .sprite {
+      display: block;
+      float: left;
+    }
+
+    .count {
+      float: left;
+      font-family: "Doppio One", sans-serif;
+      margin-left: 30px;
+
+      span {
+        color: #ee8a18;
+        line-height: 0.8;
+      }
+
+      .label {
+        color: #444f5b;
+        font-size: 17px;
+        line-height: 1;
+      }
+    }
+
+    &.small .count span {
+      font-size: 40px;
+    }
+
+    &.medium .count span {
+      font-size: 45px;
+    }
+
+    &.large .count span {
+      font-size: 50px;
+    }
+
+    @media (max-width: @screen-sm-max) {
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+
+      &:first-child {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
