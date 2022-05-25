@@ -8,7 +8,7 @@
 		"laravel/framework": "5.0.*",
         "laravel/socialite": "~2.0",
         "paypal/rest-api-sdk-php": "1.3.*",
-        "guzzlehttp/guzzle": "~5.0",
+        "guzzlehttp/guzzle": "~6.5",
         "vsmoraes/laravel-pdf": "1.0.1",
         "fadion/maneuver": "dev-l5",
         "oureastudios/laravel5-braintree": "dev-master",
